@@ -281,3 +281,7 @@ class KMeans(sk_cluster.KMeans):
         iters = max(min(self.epsilon / epsilon_m, 7), 2)
 
         return int(iters)
+
+    def set_clusters(self, clusters):
+
+        self.cluster_centers_ = clusters
