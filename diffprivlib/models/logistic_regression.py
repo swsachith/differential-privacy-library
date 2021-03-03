@@ -420,3 +420,7 @@ def _check_multi_class(multi_class, solver, n_classes):
         multi_class = 'ovr'
 
     return multi_class
+
+
+def set_coeff(self, coefficients):
+    self.coef_ = coefficients
