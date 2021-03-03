@@ -272,6 +272,9 @@ class LogisticRegression(linear_model.LogisticRegression):
 
         return self
 
+    def set_coeff(self, coefficients):
+        self.coef_ = coefficients
+
 
 def _logistic_regression_path(X, y, epsilon, data_norm, pos_class=None, Cs=10, fit_intercept=True, max_iter=100,
                               tol=1e-4, verbose=0, coef=None, check_input=True, **unused_args):
@@ -420,7 +423,3 @@ def _check_multi_class(multi_class, solver, n_classes):
         multi_class = 'ovr'
 
     return multi_class
-
-
-def set_coeff(self, coefficients):
-    self.coef_ = coefficients
